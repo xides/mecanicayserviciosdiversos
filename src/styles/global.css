@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.inter-100 {
+    font-family: "Inter Tight", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+h1,h2,h3,h4,h5,h6,p,a,span,li,button,input,textarea,select,option,button {
+    font-family: "Inter Tight", sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 700;
+}
+body {
+    font-family: "Inter Tight", sans-serif;
+    background-color: #fbfbf9;
+}

@@ -1,0 +1,71 @@
+---
+import "../../styles/global.css";
+
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import InternalHero from "../../components/InternalHero.astro";
+import ServiceGallery from "../../components/ServiceGallery.astro";
+
+const slides = [
+	{
+		title: "Mecánica Industrial",
+		description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+		image: "/img/gallery/1.png",
+	},
+	{
+		title: "Construcción",
+		description: "Excelencia y atención al detalle en cada etapa del proyecto. Desde la planificación hasta la entrega, garantizamos resultados duraderos y de alta calidad.",
+		image: "/img/gallery/2.png",
+	},
+	{
+		title: "Tuberías y Válvulas",
+		description: "Soluciones robustas y confiables para sus sistemas industriales. Calidad y durabilidad garantizadas para asegurar el óptimo funcionamiento de sus operaciones.",
+		image: "/img/gallery/1.png",
+	},
+];
+const title = "Otros Servicios";
+const heroImage = "/img/background.webp";
+const paragraphs = [
+	'lorem	...',
+];
+const list = [
+	'Mantenimiento de plantas de tratamiento de aguas residuales.',
+	'Limpieza de tanques industriales.',
+	'Limpieza de cisternas.',
+	'Trabajos con pintura (agua, aceite, epóxica, etc).',
+	'Trabajos en acrílico y aluminio.',
+	'Fabricación de ductos en lonas plastificadas.',
+	'Reparaciones de techos.',
+	'Trabajos de impermeabilización.',
+	'Limpieza generales de áreas.',
+];
+---
+
+<Layout title={title}>
+	<Navbar />
+	<InternalHero image={heroImage} />
+
+	<div class="py-10 md:py-20 px-6 md:px-0 container mx-auto" >
+		<div class="max-w-5xl md:p-0 mb-6">
+			<h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+				{title}
+			</h2>
+
+			{paragraphs.map((item) => (
+				<p class="text-lg mt-4 text-slate-600 mb-6">{item}</p>
+			))}
+
+		</div>
+
+		<ul class="list-disc ml-8 text-lg text-slate-600">
+			{list.map((item) => (
+				<li>{item}</li>
+			))}
+		</ul>
+	</div>
+
+	<ServiceGallery slides={slides} />
+	<Footer />
+
+</Layout>

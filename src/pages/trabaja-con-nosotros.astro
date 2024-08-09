@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import InternalHero from "../components/InternalHero.astro";
+---
+
+<Layout title="Trabaja con nosotros - Mecánica y servicios diversos">
+
+
+	<Navbar />
+	<InternalHero image="/img/heros/people.webp" />
+
+	<div class="py-10 md:py-20 px-6 md:px-0 container mx-auto" id="work">
+		<div class="max-w-4xl md:p-0">
+
+			<h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+				Únete a Nuestro Equipo
+			</h2>
+			<p class="text-lg mt-4 text-slate-600 mb-6">
+				En Mecánica y servicios diversos, valoramos el talento y la dedicación. Si estás buscando una oportunidad para desarrollar tu carrera en un ambiente innovador y dinámico, nos encantaría conocerte. Por favor, completa el siguiente formulario para enviarnos tu currículum y formar parte de nuestro equipo de profesionales comprometidos con la excelencia. ¡Esperamos tu aplicación!
+			</p>
+			<div class="py-4 block">
+				<a href="https://docs.google.com/forms/d/e/1FAIpQLSc-gSyvoEB56Mlqd5QubPMwD3rga9sETpeARZv0YB0SCAq_Zw/viewform?usp=sf_link" class="btn bg-black px-8 py-2 text-white rounded-full" target="_blank">
+					Formulario de solicitud
+				</a>
+			</div>
+		</div>
+
+	</div>
+
+	<Footer />
+
+</Layout>

@@ -1,0 +1,214 @@
+---
+import "../../styles/global.css";
+
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import InternalHero from "../../components/InternalHero.astro";
+import ServiceGallery from "../../components/ServiceGallery.astro";
+
+const slides = [
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/1.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/2.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/3.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/4.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/5.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/6.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/7.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/8.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/9.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/10.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/11.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/12.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/13.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/14.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/15.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/16.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/17.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/18.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/19.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/20.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/21.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/22.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/23.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/24.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/Picture25.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/Picture26.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/Picture27.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/Picture28.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/Picture29.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/Picture30.jpg",
+},
+{
+    title: "Mecánica Industrial",
+    description: "Desde el diseño hasta la implementación, garantizamos eficiencia y calidad en cada proyecto.",
+    image: "/img/gallery/mecanica-industrial/Picture31.jpg",
+},
+];
+const title = "Mecánica Industrial";
+const heroImage = "/img/background.webp";
+const paragraphs = [
+	'Nuestra gama de soluciones abarca desde la mecánica industrial y la construcción hasta la instalación de tuberías, válvulas, aire acondicionado, refrigeración y ventilación mecánica. Cada proyecto es ejecutado con un compromiso inquebrantable con la calidad, eficiencia y satisfacción del cliente, asegurando que tus operaciones funcionen de manera óptima y sin contratiempos.',
+];
+const list = [
+	'Fabricación y montaje de estructuras y piezas metálicas.',
+	'Fabricación y montaje de tanques industriales.',
+	'Fabricación y montaje de tolvas y ductos industriales.',
+	'Trabajos en soldadura eléctrica, TIG, MIG.',
+	'Trabajos en acero inoxidable grado sanitario y alimenticio.',
+	'Montaje, mantenimiento y modificación de bandas transportadoras.',
+	'Cortes con herramientas de poder, oxiacetileno y plasma.',
+	'Trabajos de rolado.',
+	'Trabajos en obra de banco.',
+	'Desmontaje y movimiento de maquinas según requerimiento.',
+	'Fabricación de piezas en torno y fresadora.',
+	'Fabricación y mantenimiento de chimeneas.',
+	'Fabricación y mantenimiento de cocinas y campanas industriales.',
+];
+---
+
+<Layout title={title}>
+	<Navbar />
+	<InternalHero image={heroImage} />
+
+	<div class="py-10 md:py-20 px-6 md:px-0 container mx-auto" >
+		<div class="max-w-5xl md:p-0 mb-6">
+			<h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+				{title}
+			</h2>
+
+			{paragraphs.map((item) => (
+				<p class="text-lg mt-4 text-slate-600 mb-6">{item}</p>
+			))}
+
+		</div>
+		<ul class="list-disc ml-8 text-lg text-slate-600">
+			{list.map((item) => (
+				<li>{item}</li>
+			))}
+		</ul>
+	</div>
+
+	<ServiceGallery slides={slides} />
+	<Footer />
+
+</Layout>

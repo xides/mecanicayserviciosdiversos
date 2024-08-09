@@ -1,0 +1,495 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Mecánica y servicios diversos">
+	<Navbar />
+	<div>
+		<div class="py-10 md:py-20 lg:py-32" id="home-hero">
+			<div class="py-10 md:py-20 lg:py-32">
+				<div class="max-w-4xl mx-auto md:p-0">
+					<div
+						class="w-full md:w-1/2"
+						data-aos="fade-up "
+						data-aos-easing="ease"
+						data-aos-delay="100"
+						style=" padding: 3rem; border-radius: 5px; text-align: center;"
+					>
+						<img
+							src="/img/large-logo.webp"
+							alt="services"
+							class="inline"
+						/>
+						<p
+							class="subtitle text-white text-xl xl:text-2xl font-semibold my-5"
+						>
+							Expertos en Mantenimiento industrial y gestión de proyectos
+						</p>
+					</div>
+				</div>
+			</div>
+			<a href="#services" class="flex items-center justify-center p-4  text-white  transition duration-300 bounce-animation ">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+				</svg>
+			</a>
+		</div>
+	</div>
+	<div class="container mx-auto py-10 md:py-20 px-6 md:px-0" id="services">
+		<div class="md:mt-20">
+			<h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+				Excelencia en Servicios Industriales
+			</h2>
+			<p class="text-lg mt-4 text-slate-600">
+				Impulsamos el rendimiento de tu industria con servicios
+				integrales y personalizados, respaldados por décadas de
+				experiencia.
+			</p>
+		</div>
+		<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+			<div class="flex gap-4 items-start" data-aos="fade-up">
+				<div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
+					<svg
+						viewBox="0 0 15 15"
+						version="1.1"
+						id="industry"
+						xmlns="http://www.w3.org/2000/svg"
+						fill="white"
+						stroke="white"
+						><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+							id="SVGRepo_tracerCarrier"
+							stroke-linecap="round"
+							stroke-linejoin="round"></g><g
+							id="SVGRepo_iconCarrier"
+						>
+							<path
+								d="M14,1v12H1V8.72c0.0016-0.1419,0.0634-0.2764,0.17-0.37l3-3.22c0.2074-0.1823,0.5234-0.1618,0.7056,0.0456 C4.9568,5.268,5.0011,5.387,5,5.51v3l3.16-3.37c0.2025-0.1878,0.5188-0.1759,0.7066,0.0266C8.9532,5.2599,9.0009,5.3827,9,5.51V11h3 V1H14z"
+							></path>
+						</g></svg
+					>
+				</div>
+				<div>
+					<h3 class="font-semibold text-lg">Mecánica Industrial</h3>
+					<p class="text-slate-500 mt-2 leading-relaxed">
+						Desde el diseño hasta la implementación, garantizamos
+						eficiencia y calidad en cada proyecto. <a
+							class="underline text-slate-600"
+							href="/services/mecanica-industrial"
+						>
+							Ver más</a
+						>
+					</p>
+				</div>
+			</div><div class="flex gap-4 items-start" data-aos="fade-up">
+				<div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
+					<svg
+						width="1em"
+						height="1em"
+						viewBox="0 0 24 24"
+						class="text-white"
+						data-icon="bx:bxs-window-alt"
+					>
+						<symbol id="ai:bx:bxs-window-alt"
+							><path
+								d="M20 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zm-3 3h2v2h-2V6zm-3 0h2v2h-2V6zM4 19v-9h16.001l.001 9H4z"
+								fill="currentColor"></path></symbol
+						><use xlink:href="#ai:bx:bxs-window-alt"></use>
+					</svg>
+				</div>
+				<div>
+					<h3 class="font-semibold text-lg">Construcción</h3>
+					<p class="text-slate-500 mt-2 leading-relaxed">
+						Excelencia y atención al detalle en cada etapa del
+						proyecto. Desde la planificación hasta la entrega,
+						garantizamos resultados duraderos y de alta calidad. <a
+							class="underline text-slate-600"
+							href="/services/construccion"
+						>
+							Ver más</a
+						>
+					</p>
+				</div>
+			</div><div class="flex gap-4 items-start" data-aos="fade-up">
+				<div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
+					<svg
+						width="1em"
+						height="1em"
+						viewBox="0 0 24 24"
+						class="text-white"
+						data-icon="bx:bxs-data"
+					>
+						<symbol id="ai:bx:bxs-data"
+							><path
+								d="M20 6c0-2.168-3.663-4-8-4S4 3.832 4 6v2c0 2.168 3.663 4 8 4s8-1.832 8-4V6zm-8 13c-4.337 0-8-1.832-8-4v3c0 2.168 3.663 4 8 4s8-1.832 8-4v-3c0 2.168-3.663 4-8 4z"
+								fill="currentColor"></path><path
+								d="M20 10c0 2.168-3.663 4-8 4s-8-1.832-8-4v3c0 2.168 3.663 4 8 4s8-1.832 8-4v-3z"
+								fill="currentColor"></path></symbol
+						><use xlink:href="#ai:bx:bxs-data"></use>
+					</svg>
+				</div>
+				<div>
+					<h3 class="font-semibold text-lg">Tuberías y Válvulas</h3>
+					<p class="text-slate-500 mt-2 leading-relaxed">
+						Soluciones robustas y confiables para sus sistemas
+						industriales. Calidad y durabilidad garantizadas para
+						asegurar el óptimo funcionamiento de sus operaciones. <a
+							class="underline text-slate-600"
+							href="/services/tuberias-y-valvulas"
+						>
+							Ver más</a
+						>
+					</p>
+				</div>
+			</div>
+			<div
+				class="flex gap-4 items-start"
+				data-aos="fade-up"
+				data-aos-duration="1000"
+			>
+				<div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
+					<svg
+						width="1em"
+						height="1em"
+						viewBox="0 0 24 24"
+						class="text-white"
+						data-icon="bx:bxs-bot"
+					>
+						<symbol id="ai:bx:bxs-bot"
+							><path
+								d="M21 10.975V8a2 2 0 0 0-2-2h-6V4.688c.305-.274.5-.668.5-1.11a1.5 1.5 0 0 0-3 0c0 .442.195.836.5 1.11V6H5a2 2 0 0 0-2 2v2.998l-.072.005A.999.999 0 0 0 2 12v2a1 1 0 0 0 1 1v5a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a1 1 0 0 0 1-1v-1.938a1.004 1.004 0 0 0-.072-.455c-.202-.488-.635-.605-.928-.632zM7 12c0-1.104.672-2 1.5-2s1.5.896 1.5 2s-.672 2-1.5 2S7 13.104 7 12zm8.998 6c-1.001-.003-7.997 0-7.998 0v-2s7.001-.002 8.002 0l-.004 2zm-.498-4c-.828 0-1.5-.896-1.5-2s.672-2 1.5-2s1.5.896 1.5 2s-.672 2-1.5 2z"
+								fill="currentColor"></path></symbol
+						><use xlink:href="#ai:bx:bxs-bot"></use>
+					</svg>
+				</div>
+				<div>
+					<h3 class="font-semibold text-lg">
+						Aire Acondicionado y Refrigeración
+					</h3>
+					<p class="text-slate-500 mt-2 leading-relaxed">
+						Tecnología avanzada para su confort y eficiencia
+						energética con los más altos estándares de calidad. <a
+							class="underline text-slate-600"
+							href="/services/aire-acondicionado-y-refrigeracion"
+						>
+							Ver más</a
+						>
+					</p>
+				</div>
+			</div>
+			<div
+				class="flex gap-4 items-start"
+				data-aos="fade-up"
+				data-aos-duration="1000"
+			>
+				<div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
+					<svg
+						width="1em"
+						height="1em"
+						viewBox="0 0 24 24"
+						class="text-white"
+						data-icon="bx:bxs-file-find"
+					>
+						<symbol id="ai:bx:bxs-file-find"
+							><path
+								d="M6 22h12c.178 0 .348-.03.512-.074l-3.759-3.759A4.966 4.966 0 0 1 12 19c-2.757 0-5-2.243-5-5s2.243-5 5-5s5 2.243 5 5a4.964 4.964 0 0 1-.833 2.753l3.759 3.759c.044-.164.074-.334.074-.512V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"
+								fill="currentColor"></path><circle
+								cx="12"
+								cy="14"
+								r="3"
+								fill="currentColor"></circle></symbol
+						><use xlink:href="#ai:bx:bxs-file-find"></use>
+					</svg>
+				</div>
+				<div>
+					<h3 class="font-semibold text-lg">Ventilación Mecánica</h3>
+					<p class="text-slate-500 mt-2 leading-relaxed">
+						Sistemas eficientes para mejorar la calidad del aire y
+						optimizar el confort en sus espacios. <a
+							class="underline text-slate-600"
+							href="/services/ventilacion-mecanica"
+						>
+							Ver más</a
+						>
+					</p>
+				</div>
+			</div>
+			<div
+				class="flex gap-4 items-start"
+				data-aos="fade-up"
+				data-aos-duration="1000"
+			>
+				<div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
+					<svg
+						width="1em"
+						height="1em"
+						viewBox="0 0 24 24"
+						class="text-white"
+						data-icon="bx:bxs-file-find"
+					>
+						<symbol id="ai:bx:bxs-file-find"
+							><path
+								d="M6 22h12c.178 0 .348-.03.512-.074l-3.759-3.759A4.966 4.966 0 0 1 12 19c-2.757 0-5-2.243-5-5s2.243-5 5-5s5 2.243 5 5a4.964 4.964 0 0 1-.833 2.753l3.759 3.759c.044-.164.074-.334.074-.512V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"
+								fill="currentColor"></path><circle
+								cx="12"
+								cy="14"
+								r="3"
+								fill="currentColor"></circle></symbol
+						><use xlink:href="#ai:bx:bxs-file-find"></use>
+					</svg>
+				</div>
+				<div>
+					<h3 class="font-semibold text-lg">Otros servicios</h3>
+					<p class="text-slate-500 mt-2 leading-relaxed">
+						Sistemas eficientes para mejorar la calidad del aire y
+						optimizar el confort en sus espacios. <a
+							class="underline text-slate-600"
+							href="/services/otros-servicios"
+						>
+							Ver más</a
+						>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="container mx-auto py-10 md:py-20 px-6 md:px-0" id="contact" > <div class="mb-16 md:w-2/3 lg:w-1/2"> <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight" > ¿Listo para llevar tu industria al siguiente nivel? </h2> <p class="text-lg mt-4 text-slate-600"> Desde 1992, nos hemos dedicado a proporcionar servicios de alta calidad con un enfoque en la seguridad y la eficiencia. </p> </div> <div class="grid gap-6 px-4 sm:px-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" > <div class="group relative rounded-3xl space-y-6 overflow-hidden" > <img class="mx-auto h-[26rem] w-full grayscale object-cover object-top ransition duration-500 group-hover:scale-105 group-hover:grayscale-0" src="/img/profile.png" alt="woman" loading="lazy" width="640" height="805" /> <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 bg-gray-800 dark:bg-white translate-y-24 transition duration-300 ease-in-out group-hover:translate-y-0" > <div> <h4 class="text-xl font-semibold dark:text-gray-700 text-white" > Ing. Hamilton Caballero </h4> <span class="block text-sm text-gray-400" >Representante</span > </div> <p class="mt-8 pb-4 text-gray-300 dark:text-gray-600"> <a target="_blank" href="//wa.me/+50377873124" >+503 7787-3124</a > <br /> <a href="mailto:ing.hamilton.caballero@outlook.com" >ing.hamilton.caballero@outlook.com</a > </p> </div> </div> <div class="group relative rounded-3xl space-y-6 overflow-hidden" > <img class="mx-auto h-[26rem] w-full grayscale object-cover object-top ransition duration-500 group-hover:scale-105 group-hover:grayscale-0" src="/img/profile.webp" alt="woman" loading="lazy" width="640" height="805" /> <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 bg-gray-800 dark:bg-white translate-y-24 transition duration-300 ease-in-out group-hover:translate-y-0" > <div> <h4 class="text-xl font-semibold dark:text-gray-700 text-white" > Ing. Matilde Hernández </h4> <span class="block text-sm text-gray-400" >Coordinadora Administrativa</span > </div> <p class="mt-8 pb-4 text-gray-300 dark:text-gray-600"> <a target="_blank" href="//wa.me/+50375394734" >+503 7539-4734</a > <br /> <a href="mailto:msd_sadecv@hotmail.com" >msd_sadecv@hotmail.com</a > </p> </div> </div> <div class="group relative rounded-3xl space-y-6 overflow-hidden" > <img class="mx-auto h-[26rem] w-full grayscale object-cover object-top transition duration-500 group-hover:scale-105 group-hover:grayscale-0" src="/img/profile.webp" alt="woman" loading="lazy" width="640" height="805" /> <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 bg-gray-800 dark:bg-white translate-y-24 transition duration-300 ease-in-out group-hover:translate-y-0" > <div> <h4 class="text-xl font-semibold dark:text-gray-700 text-white" > Ing. Abel Díaz </h4> <span class="block text-sm text-gray-400" >Supervisor de Proyectos</span > </div> <p class="mt-8 pb-4 text-gray-300 dark:text-gray-600"> <a target="_blank" href="//wa.me/+50372792075" >+503 7279-2075</a > <br /> <a href="mailto:diazabel1994@gmail.com" >diazabel1994@gmail.com</a > </p> </div> </div> </div> </div> -->
+	<div class="container mx-auto py-10 md:py-20 px-6 md:px-0" id="contact">
+		<div class="mb-16 md:w-2/3 lg:w-1/2">
+			<h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+				¿Listo para llevar tu industria al siguiente nivel?
+			</h2>
+			<p class="text-lg mt-4 text-slate-600">
+				Desde 1992, nos hemos dedicado a proporcionar servicios de alta
+				calidad con un enfoque en la seguridad y la eficiencia.
+			</p>
+		</div>
+		<div
+			class="grid gap-6 px-4 sm:px-0 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 h-60 lg:h-28 md:h-52"
+		>
+			<div
+				class="group relative rounded-3xl space-y-6 overflow-hidden h-36 md:h-30"
+			>
+				<div
+					class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 bg-gray-800 dark:bg-white translate-y-24 transition duration-300 ease-in-out group-hover:translate-y-0"
+				>
+					<div>
+						<h4
+							class="text-xl font-semibold dark:text-gray-700 text-white"
+						>
+							Ing. Hamilton Caballero
+						</h4>
+						<span class="block text-sm text-gray-400"
+							>Representante</span
+						>
+					</div>
+					<p class="mt-8 pb-4 text-gray-300 dark:text-gray-600">
+						<a target="_blank" href="//wa.me/+50377873124"
+							>+503 7787-3124</a
+						>
+						<br />
+						<a
+							href="mailto:hamilton.caballero@mecanicayserviciosdiversos.com"
+							>Escribir correo electrónico</a
+						>
+					</p>
+				</div>
+			</div>
+			<div
+				class="group relative rounded-3xl space-y-6 overflow-hidden h-36 md:h-30"
+			>
+				<div
+					class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 bg-gray-800 dark:bg-white translate-y-24 transition duration-300 ease-in-out group-hover:translate-y-0"
+				>
+					<div>
+						<h4
+							class="text-xl font-semibold dark:text-gray-700 text-white"
+						>
+							Ing. Matilde Hernández
+						</h4>
+						<span class="block text-sm text-gray-400"
+							>Coordinadora Administrativa</span
+						>
+					</div>
+					<p class="mt-8 pb-4 text-gray-300 dark:text-gray-600">
+						<a target="_blank" href="//wa.me/+50375394734"
+							>+503 7539-4734</a
+						>
+						<br />
+						<a href="mailto:msd_sadecv@hotmail.com"
+							>Escribir correo electrónico</a
+						>
+					</p>
+				</div>
+			</div>
+			<div
+				class="group relative rounded-3xl space-y-6 overflow-hidden h-36 md:h-30"
+			>
+				<div
+					class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 bg-gray-800 dark:bg-white translate-y-24 transition duration-300 ease-in-out group-hover:translate-y-0"
+				>
+					<div>
+						<h4
+							class="text-xl font-semibold dark:text-gray-700 text-white"
+						>
+							Ing. Abel Díaz
+						</h4>
+						<span class="block text-sm text-gray-400"
+							>Supervisor de Proyectos</span
+						>
+					</div>
+					<p class="mt-8 pb-4 text-gray-300 dark:text-gray-600">
+						<a target="_blank" href="//wa.me/+50372792075"
+							>+503 7279-2075</a
+						>
+						<br />
+						<a
+							href="mailto:abel.diaz@mecanicayserviciosdiversos.com"
+							>Escribir correo electrónico</a
+						>
+					</p>
+				</div>
+			</div>
+			<div
+				class="group relative rounded-3xl space-y-6 overflow-hidden h-36 md:h-30"
+			>
+				<div
+					class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 bg-gray-800 dark:bg-white translate-y-24 transition duration-300 ease-in-out group-hover:translate-y-0"
+				>
+					<div>
+						<h4
+							class="text-xl font-semibold dark:text-gray-700 text-white"
+						>
+							Suanny Caballero
+						</h4>
+						<span class="block text-sm text-gray-400">Finanzas</span
+						>
+					</div>
+					<p class="mt-8 pb-4 text-gray-300 dark:text-gray-600">
+						<a target="_blank" href="//wa.me/+50372792075"
+							>+503 7279-2075</a
+						>
+						<br />
+						<a
+							href="mailto:suany.caballero@mecanicayserviciosdiversos.com"
+							>Escribir correo electrónico</a
+						>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container mx-auto my-16 block">
+		<p class="text-lg text-center text-slate-600">
+			Ellos confían en nuestro trabajo.
+		</p>
+		<div class="flex gap-4 items-center justify-center py-8 clients-logos">
+			<div class="filter grayscale hover:grayscale-0 opacity-50 hover:opacity-100" >
+				<img loading="lazy" src="/img/diana.png" alt="" />
+			</div>
+			<div class="filter grayscale hover:grayscale-0 opacity-50 hover:opacity-100" >
+				<img loading="lazy" src="/img/unigas.png" alt="" />
+			</div>
+			<div class="filter grayscale hover:grayscale-0 opacity-50 hover:opacity-100" >
+				<img loading="lazy" src="/img/unilever.png" alt="" />
+			</div>
+
+			<div class="hidden md:block filter grayscale hover:grayscale-0 opacity-50 hover:opacity-100" >
+				<img loading="lazy" src="/img/diana.png" alt="" />
+			</div>
+			<div class="hidden md:block filter grayscale hover:grayscale-0 opacity-50 hover:opacity-100" >
+				<img loading="lazy" src="/img/unigas.png" alt="" />
+			</div>
+			<div class="hidden md:block filter grayscale hover:grayscale-0 opacity-50 hover:opacity-100" >
+				<img loading="lazy" src="/img/unilever.png" alt="" />
+			</div>
+		</div>
+	</div>
+	<div id="map" class="mt-20" style="height: 500px"></div>
+	<Footer />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDNu4dv7SUlrToaHttBXzorSwDGuv0SgM&callback=initMap&libraries=&v=weekly"
+		defer
+		is:inline></script>
+	<script is:inline>
+		AOS.init();
+		function initMap() {
+			const map = new google.maps.Map(document.getElementById("map"), {
+				zoom: 15,
+				center: { lat: 13.7059, lng: -89.159706 },
+				styles: [
+					{
+						featureType: "administrative",
+						elementType: "labels.text.fill",
+						stylers: [{ color: "#444444" }],
+					},
+					{
+						featureType: "landscape",
+						elementType: "all",
+						stylers: [{ color: "#f2f2f2" }],
+					},
+					{
+						featureType: "poi",
+						elementType: "all",
+						stylers: [{ visibility: "off" }],
+					},
+					{
+						featureType: "road",
+						elementType: "all",
+						stylers: [{ saturation: -100 }, { lightness: 45 }],
+					},
+					{
+						featureType: "road.highway",
+						elementType: "all",
+						stylers: [{ visibility: "simplified" }],
+					},
+					{
+						featureType: "road.arterial",
+						elementType: "labels.icon",
+						stylers: [{ visibility: "off" }],
+					},
+					{
+						featureType: "transit",
+						elementType: "all",
+						stylers: [{ visibility: "off" }],
+					},
+					{
+						featureType: "water",
+						elementType: "all",
+						stylers: [{ color: "#cbcbcb" }, { visibility: "on" }],
+					},
+				],
+			});
+			new google.maps.Marker({
+				position: { lat: 13.7059, lng: -89.159706 },
+				map,
+				title: "Mecánica y servicios diversos",
+			});
+		}
+	</script>
+</Layout>
+<style>
+	#home-hero {
+		background: rgb(0 9 36 / 83%);
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+		background-image: url("/img/background.webp");
+	}
+	@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounce-animation {
+  animation: bounce 2s infinite;
+}
+</style>

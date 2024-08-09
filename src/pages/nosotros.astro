@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import InternalHero from "../components/InternalHero.astro";
+---
+
+<Layout title="Nosotros - Mecánica y servicios diversos">
+
+	<Navbar />
+	<InternalHero image="/img/heros/avion.webp" />
+
+	<div class="py-10 md:py-20 px-6 md:px-0 container mx-auto" id="services">
+		<div class="mb-20">
+			<div class="max-w-5xl md:p-0 mb-6">
+				<h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+					Nosotros
+				</h2>
+				<p class="text-lg mt-4 text-slate-600 mb-6">
+					Nuestra gama de soluciones abarca desde la mecánica
+					industrial y la construcción hasta la instalación de
+					tuberías, válvulas, aire acondicionado, refrigeración y
+					ventilación mecánica. Cada proyecto es ejecutado con un
+					compromiso inquebrantable con la calidad, eficiencia y
+					satisfacción del cliente, asegurando que tus operaciones
+					funcionen de manera óptima y sin contratiempos.
+				</p>
+			</div>
+		</div>
+
+		<div class="flex flex-col md:flex-row  gap-12">
+			<div class="max-w-5xl md:p-0 mb-6">
+				<h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight">
+					Misión
+				</h2>
+				<p class="text-lg mt-4 text-slate-600 mb-6">
+					Nuestra gama de soluciones abarca desde la mecánica
+					industrial y la construcción hasta la instalación de
+					tuberías, válvulas, aire acondicionado, refrigeración y
+					ventilación mecánica. Cada proyecto es ejecutado con un
+					compromiso inquebrantable con la calidad, eficiencia y
+					satisfacción del cliente, asegurando que tus operaciones
+					funcionen de manera óptima y sin contratiempos.
+				</p>
+			</div>
+			<div class="max-w-5xl md:p-0 mb-6">
+				<h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight">
+					Visión
+				</h2>
+				<p class="text-lg mt-4 text-slate-600 mb-6">
+					Nuestra gama de soluciones abarca desde la mecánica
+					industrial y la construcción hasta la instalación de
+					tuberías, válvulas, aire acondicionado, refrigeración y
+					ventilación mecánica. Cada proyecto es ejecutado con un
+					compromiso inquebrantable con la calidad, eficiencia y
+					satisfacción del cliente, asegurando que tus operaciones
+					funcionen de manera óptima y sin contratiempos.
+				</p>
+			</div>
+
+		</div>
+		<div class="mb-20">
+			<p class="text-lg mt-4 text-slate-600 mb-6">¿Te sientes identificado? Trabaja con nosotros <a href="/trabaja-con-nosotros" class="font-semibold underline" >aquí</a>.</p>
+		</div>
+
+	</div>
+
+	<Footer />
+</Layout>

@@ -1,0 +1,92 @@
+---
+const slides = Astro.props.slides;
+---
+
+<div class="w-full md:w-1/2 mb-32 mx-auto max-w-3xl">
+	<div class="w-full">
+		<div class="relative mb-2">
+			{
+				slides.map((item: { image: string | null | undefined; title: string | null | undefined; description: unknown; }) => (
+					<div>
+
+						<div
+							class="image-bg-container mySlides transition duration-300"
+							style={`background-image: url('${item.image}')`}
+							>
+							</div>
+
+							{item.description.lenght>0 ? (
+								<p
+									class="text-center w-full text-xs leading-5 absolute bottom-0 p-3 text-white descriptions"
+									style="display:none; background-color:rgb(0 0 0 / .5)"
+								>
+									{item.description}
+								</p>
+							):null}
+
+					</div>
+				))
+			}
+		</div>
+	</div>
+	<div class="flex gap-2">
+		{
+			slides.map((item: { image: string | null | undefined; title: string | null | undefined; }, index: number) => (
+				<div>
+					<img
+						loading="lazy"
+						class="cursor-pointer w-full opacity-55 hover:opacity-100 duration-100"
+						src={item.image}
+						alt={item.title}
+						onclick={`currentDiv(${index + 1})`}
+					/>
+				</div>
+			))
+		}
+	</div>
+</div>
+<script is:inline>
+	let slideIndex = 0;
+	let initInterval = 0;
+	let timeInterval = 10000;
+
+	function currentDiv(n) {
+		showDivs((slideIndex = n));
+		initInterval = 0;
+	}
+	function showDivs(n) {
+		var i;
+		var x = document.getElementsByClassName("mySlides");
+		var descriptions = document.getElementsByClassName("descriptions");
+		if (n > x.length) {
+			slideIndex = 1;
+		}
+		if (n < 1) {
+			slideIndex = x.length;
+		}
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";
+		}
+		x[slideIndex - 1].style.display = "block";
+
+		for (i = 0; i < descriptions.length; i++) {
+			descriptions[i].style.display = "none";
+		}
+		descriptions[slideIndex - 1].style.display = "block";
+	}
+
+	window.addEventListener("load", function () {
+		initInterval = setInterval(() => {
+			currentDiv(slideIndex + 1);
+		}, timeInterval);
+	});
+	currentDiv(1);
+</script>
+
+<style>
+	.image-bg-container{
+		background-size: cover;
+		background-position: center;
+		height: 400px;
+	}
+	</style>

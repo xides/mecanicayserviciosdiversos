@@ -1,0 +1,77 @@
+---
+import "../../styles/global.css";
+
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import InternalHero from "../../components/InternalHero.astro";
+import ServiceGallery from "../../components/ServiceGallery.astro";
+
+const slides = [
+	{
+		title: "Construcción",
+		description: "" ,
+		image: "/img/gallery/construccion/construccion-1.png",
+	},
+	{
+		title: "Construcción",
+		description: "" ,
+		image: "/img/gallery/construccion/construccion-2.png",
+	},
+	{
+		title: "Construcción",
+		description: "" ,
+		image: "/img/gallery/construccion/construccion-3.png",
+	},
+	{
+		title: "Construcción",
+		description: "" ,
+		image: "/img/gallery/construccion/construccion-4.png",
+	},
+];
+const title = "Construcción ";
+const heroImage = "/img/background.webp";
+const paragraphs = [
+	'Ofrecemos soluciones de construcción de alta calidad que transforman sus ideas en realidades tangibles. Nuestro equipo de expertos se dedica a cada proyecto con un enfoque meticuloso y una atención excepcional al detalle, asegurando que cada fase, desde la planificación hasta la finalización, se ejecute con precisión y profesionalismo. Ya sea para proyectos residenciales, comerciales o industriales, nuestra prioridad es garantizar resultados duraderos y satisfactorios que superen sus expectativas. '
+];
+const list = [
+	'Construcción de edificaciones.',
+	'Demolición.',
+	'Terracería.',
+	'Reparación de pisos de concreto o asfalto.',
+	'Trabajos en concreto según especificaciones.',
+	'Trabajos en infraestructura vial.',
+	'Construcción y montaje de bases de concreto.',
+	'Mantenimiento de Hornos Refractarios Industriales.',
+	'Enchapado de pisos y azulejos.',
+	'Trabajos de tabla roca.',
+	'Instalación de cielo falso y PVC.',
+];
+---
+
+<Layout title={title}>
+	<Navbar />
+	<InternalHero image={heroImage} />
+
+	<div class="py-10 md:py-20 px-6 md:px-0 container mx-auto" >
+		<div class="max-w-5xl md:p-0 mb-6">
+			<h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+				{title}
+			</h2>
+
+			{paragraphs.map((item) => (
+				<p class="text-lg mt-4 text-slate-600 mb-6">{item}</p>
+			))}
+
+		</div>
+		<ul class="list-disc ml-8 text-lg text-slate-600">
+			{list.map((item) => (
+				<li>{item}</li>
+			))}
+		</ul>
+	</div>
+
+	<ServiceGallery slides={slides} />
+	<Footer />
+
+</Layout>
