@@ -12,19 +12,24 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Mecánica y servicios diversos" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/img/large-logo.png" />
 		<meta name="generator" content="MaderaCode" />
 		<title>{title}</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://unpkg.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		<link rel="preload" as="image" href="/img/background.webp" type="image/webp">
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/favicon/site.webmanifest">
+		<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
 		<script is:inline>
 			console.log("%c Fast, right? Built with 🧡 by  https://maderacode.com", "background-color: #EB5E28; color: #FFF; font-size:10px; padding:8px 10px 6px; border-radius:4px;")
 		</script>
 	</head>
-	<body>
+	<body class="overflow-x-scroll">
 		<slot />
 	</body>
 </html>
