@@ -8,9 +8,9 @@ import Footer from "../components/Footer.astro";
 <Layout title="Mecánica y servicios diversos">
 	<Navbar />
 	<div>
-		<div class="py-10 md:py-20 lg:py-32" id="home-hero">
-			<div class="py-10 md:py-20 lg:py-32">
-				<div class="max-w-4xl mx-auto md:p-0">
+		<div id="home-hero">
+			<div class="pt-10 pb-12  md:pt-20 md:pb-28">
+				<div class="pt-20 pb-20 max-w-8xl mx-auto">
 					<div
 						class="w-full md:w-1/2"
 						data-aos="fade-up "
@@ -22,16 +22,18 @@ import Footer from "../components/Footer.astro";
 							src="/img/large-logo.webp"
 							alt="services"
 							class="inline"
+							width="300"
+							height="222"
 						/>
 						<p
 							class="subtitle text-white text-xl xl:text-2xl font-semibold my-5"
 						>
-							Expertos en Mantenimiento industrial y gestión de proyectos
+							Expertos en Mantenimiento industrial <br> y gestión de proyectos
 						</p>
 					</div>
 				</div>
 			</div>
-			<a href="#services" class="flex items-center justify-center p-4  text-white  transition duration-300 bounce-animation ">
+			<a href="#services" class="flex items-center justify-center p-4  text-white  transition duration-300 bounce-animation" aria-label="Read more about Mecanica y Servicios diversos">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 				</svg>
@@ -387,23 +389,23 @@ import Footer from "../components/Footer.astro";
 		</p>
 		<div class="flex gap-4 items-center justify-center py-8 clients-logos">
 			<div class="filter grayscale hover:grayscale-0 opacity-50 hover:opacity-100" >
-				<img loading="lazy" src="/img/diana.png" alt="" />
+				<img width="150" height="76" loading="lazy" src="/img/diana.webp" alt="Diana client logo" />
 			</div>
 			<div class="filter grayscale hover:grayscale-0 opacity-50 hover:opacity-100" >
-				<img loading="lazy" src="/img/unigas.png" alt="" />
+				<img width="150" height="76" loading="lazy" src="/img/unigas.webp" alt="Unigas client logo" />
 			</div>
 			<div class="filter grayscale hover:grayscale-0 opacity-50 hover:opacity-100" >
-				<img loading="lazy" src="/img/unilever.png" alt="" />
+				<img width="150" height="76" loading="lazy" src="/img/unilever.webp" alt="Unilever client logo" />
 			</div>
 
 			<div class="hidden md:block filter grayscale hover:grayscale-0 opacity-50 hover:opacity-100" >
-				<img loading="lazy" src="/img/diana.png" alt="" />
+				<img width="150" height="76" loading="lazy" src="/img/diana.webp" alt="Diana client logo" />
 			</div>
 			<div class="hidden md:block filter grayscale hover:grayscale-0 opacity-50 hover:opacity-100" >
-				<img loading="lazy" src="/img/unigas.png" alt="" />
+				<img width="150" height="76" loading="lazy" src="/img/unigas.webp" alt="Unigas client logo" />
 			</div>
 			<div class="hidden md:block filter grayscale hover:grayscale-0 opacity-50 hover:opacity-100" >
-				<img loading="lazy" src="/img/unilever.png" alt="" />
+				<img width="150" height="76" loading="lazy" src="/img/unilever.webp" alt="Unilever client logo" />
 			</div>
 		</div>
 	</div>
@@ -411,16 +413,19 @@ import Footer from "../components/Footer.astro";
 	<Footer />
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDNu4dv7SUlrToaHttBXzorSwDGuv0SgM&callback=initMap&libraries=&v=weekly"
-		defer
-		is:inline></script>
+	<script async
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDNu4dv7SUlrToaHttBXzorSwDGuv0SgM&loading=async&callback=initMap">
+	</script>
 	<script is:inline>
 		AOS.init();
-		function initMap() {
-			const map = new google.maps.Map(document.getElementById("map"), {
+		async function initMap() {
+			let position = { lat: 13.7059, lng: -89.159706 };
+			const {AdvancedMarkerElement} = await google.maps.importLibrary("marker");
+
+			const map = new google.maps.Map(document.getElementById("map"),  {
 				zoom: 15,
-				center: { lat: 13.7059, lng: -89.159706 },
+				center: position,
+				mapId: "customid-mysv",
 				styles: [
 					{
 						featureType: "administrative",
@@ -464,10 +469,10 @@ import Footer from "../components/Footer.astro";
 					},
 				],
 			});
-			new google.maps.Marker({
-				position: { lat: 13.7059, lng: -89.159706 },
+
+			new AdvancedMarkerElement({
 				map,
-				title: "Mecánica y servicios diversos",
+				position: position
 			});
 		}
 	</script>
