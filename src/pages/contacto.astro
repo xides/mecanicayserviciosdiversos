@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import InternalHero from "../components/InternalHero.astro";
+---
+
+<Layout title="Contacto - Mecánica y servicios diversos">
+
+  <Navbar />
+	<InternalHero image="/img/heros/avion.webp" />
+
+  <div class="py-10 md:py-20 px-6 md:px-0 container mx-auto" id="services">
+		<div class="mb-20">
+			  <div class="max-w-5xl md:p-0 mb-6">
+          <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">Contacto</h2>
+          <p class="text-lg mt-4 text-slate-600 mb-6">
+            ¿Tiene un proyecto en mente? En Mecánica y servicios diversos, estamos aquí para ayudarle a hacerlo realidad.<br /> Contacta con nuestro equipo de expertos y déjenos convertir su visión en una realidad.
+          </p>
+        </div>
+        <div class="w-full md:w-1/2">
+          <form action="/contact-form.php" method="POST" id="contact-form">
+            <div class="mb-3" >
+                <input required class="border p-4 w-full" type="text" name="name" placeholder="Nombre" />
+            </div>
+            <div class="mb-3" >
+                <input required class="border p-4 w-full" type="email" name="email" placeholder="Correo electrónico" />
+            </div>
+            <div class="mb-3" >
+                <textarea required class="border p-4 w-full" name="message" placeholder="Mensaje" ></textarea>
+            </div>
+            <div class="flex my-8 items-center">
+              <button class="px-8 py-2 bg-slate-800 hover:bg-blue-900 text-white rounded-full" type="submit">Enviar</button>
+              <p class="px-5" id="user-message" style="display:none">
+                Mensaje enviado. <br> Nos comunicaremos con usted en un instante.
+              </p>
+            </div>
+          </form>
+        </div>
+    </div>
+  </div>
+
+  <Footer />
+</Layout>
+<script>
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const params = Object.fromEntries(urlSearchParams.entries());
+  if(params.success=='true'){
+    params.success
+    var message = document.getElementById('user-message');
+    if(message){
+      message.style.display = 'block'
+    }
+  }
+  let form = document.getElementById('contact-form');
+  if(form){
+    let input = document.createElement('input');
+    input.setAttribute('type', 'text');
+    input.setAttribute('name', 'websitemysd');
+    input.setAttribute('value', 'true');
+    input.classList.add('websitemysd');
+    form.appendChild(input);
+  }
+  </script>
+  <style is:global>
+    input.websitemysd{
+      display: none;
+    }
+  </style>
